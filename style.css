@@ -1,0 +1,91 @@
+/*
+Theme Name: Comming Soon
+*/
+
+
+/* RESETS */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+body {
+  background-color: #EF674F;
+  max-width: 100%;
+}
+html {
+  font-size:100%;
+}
+
+.coming-soon {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.bg-image {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  background: url("./comming-soon-desktop.gif") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.content-block {
+  height: calc(10vh + 20px);
+  width: 82vw;
+  background: #EF674F;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display:flex;
+}
+
+.content-block h1 {
+  font-family: 'Bebas Neue';
+  font-weight: 200;
+  font-size: calc(5vw + 2.5rem);
+  letter-spacing: calc(1vw + 2rem);
+  text-align: center;
+  color:white;
+}
+
+/* Media queries */
+@media screen and (max-width: 1020px) {
+  .content-block h1 {font-size:calc(3vw + 2rem)}
+}
+
+@media screen and (max-width: 903px ) {
+  html { font-size: 60% }
+  .content-block h1 {font-size: calc(5vw + 2.5rem);}
+  .content-block {
+    height: calc(6vh + 30px);
+    width: 100vw;
+  }
+  .bg-image {background-image: url("comming-soon-mobile.gif")}
+}
+@media screen and (max-width: 764px ) {
+  html { font-size: 50% }
+  .content-block h1 {
+     letter-spacing: calc(1vw + 1rem);
+  }
+}
+@media screen and (max-width: 635px ) {
+  html { font-size: 35% }
+}
+@media screen and (min-width: 3839px) {
+    .content-block {height: calc(15vh);}
+}
